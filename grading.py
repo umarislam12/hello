@@ -4,7 +4,7 @@ marks=st.number_input('Enter obtained marks:',min_value=1)
 total=st.number_input('Enter Total marks',min_value=1)
 
 p=marks/total*100
-r=st.button('Calculate results')
+r=st.button(' corvit Calculate results')
 if(r):
     st.subheader(f'your percentage: :blue[{p} %]')
 
