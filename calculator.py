@@ -6,7 +6,7 @@ if 'calc_input' not in st.session_state:
     st.session_state.calc_input = ''
 
 # Calculator layout
-st.title("Calculator")
+st.title("Umar's calculator for AI class")
 col1,col2=st.columns([0.7,0.3],gap="small")
 
 
