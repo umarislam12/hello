@@ -34,7 +34,7 @@ def calculate():
     try:
         st.session_state.calc_input = str(eval(st.session_state.calc_input))
     except:
-        st.session_state.calc_input = "Error"
+        st.session_state.calc_input = "Error:press clear button to continue"
 
 with col1:
 
