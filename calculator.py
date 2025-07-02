@@ -6,7 +6,8 @@ if 'calc_input' not in st.session_state:
     st.session_state.calc_input = ''
 
 # Calculator layout
-st.title("Umar's calculator for AI class")
+st.title(":primary[Umar's calculator for AI class]")
+st.title("")
 col1,col2=st.columns([0.7,0.3],gap="small")
 
 
@@ -18,7 +19,7 @@ with col1:
 
 with col2:
 
-    st.button("🧼Clear", on_click=clear_input,use_container_width=True)
+    st.button("🗑️Clear",type="primary", on_click=clear_input,use_container_width=True)
 # Create buttons for calculator
 col1, col2, col3, col4 = st.columns([0.5,0.5,0.5,0.5], vertical_alignment="top")
 
@@ -41,7 +42,7 @@ with col1:
     st.button("4", on_click=add_to_input,use_container_width=True, args=('4',))
 
     st.button("1", on_click=add_to_input,use_container_width=True, args=('1',))
-    st.button("⌫", on_click=remove_input, use_container_width=True)
+    st.button("⌫", on_click=remove_input,type="primary", use_container_width=True)
 
 with col2:
 
@@ -59,9 +60,9 @@ with col3:
     st.button(".",use_container_width=True, on_click=add_to_input, args=('.',))
 
 with col4:
-    st.button("➖", on_click=add_to_input, args=('-',),use_container_width=True)
-    st.button("➕", on_click=add_to_input, args=('+',),use_container_width=True)
-    st.button("✖️", type="secondary", on_click=add_to_input, args=('*',),use_container_width=True)
-    st.button("➗", on_click=add_to_input, args=('/',),use_container_width=True)
+    st.button("➖", on_click=add_to_input, type="primary", args=('-',),use_container_width=True)
+    st.button("➕", on_click=add_to_input,type="primary", args=('+',),use_container_width=True)
+    st.button("✖️", type="primary", on_click=add_to_input, args=('*',),use_container_width=True)
+    st.button("➗",type="primary", on_click=add_to_input, args=('/',),use_container_width=True)
 # Equal button spanning full width
-st.button("🟰", on_click=calculate, use_container_width=True)
+st.button("🟰", icon="⭐", type="primary", on_click=calculate, use_container_width=True)
